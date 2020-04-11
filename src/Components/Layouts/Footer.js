@@ -1,9 +1,17 @@
 import React from 'react';
+import { Paper, Tabs } from '@material-ui/core';
+import Tab from '@material-ui/core/Tabs';
 
-class Footer extends React.Component {
-    render() {
-        return <h1>footer</h1>
-    }
-}
-
-export default Footer;
+export default props =>
+    <Paper>
+        <Tabs
+        value={0}
+        indicatorColor="primary"
+        textColor="secondary"
+        centered
+        >
+            <Tab label="Item One" />
+            <Tab label="Item Two" />
+            <Tab label="Item Three" />
+        </Tabs>
+    </Paper>
