@@ -10,21 +10,21 @@ class App extends React.Component {
 
     getExercisesByMuscles() {
         // look up reduce
-        return this.state.exercises.reduce((exercises, exercise) => {
+        // look up Objet.entries
+        return Object.entries(this.state.exercises.reduce((exercises, exercise) => {
             const { muscles } = exercise
 
-            exercises[muscles] = exercises[muscles] ? [...exercises[muscles], exercises] : [exercise]
+            exercises[muscles] = exercises[muscles] ? [...exercises[muscles], exercise] : [exercise]
 
             return exercises
-        }, {});
+        }, {}));
     }
 
     render(){
-        console.log(this.getExercisesByMuscles())
         return (
             <Fragment>
                 <Header />
-                <Content exercises={ exercises } />
+                <Content exercises={ this.getExercisesByMuscles() } />
                 <Footer muscles={muscles} />
             </Fragment>
         )

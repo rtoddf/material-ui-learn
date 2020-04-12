@@ -12,7 +12,7 @@ export default ({muscles}) =>
         >
             <Tab label="All" />
             {muscles.map(muscles => 
-                <Tab label={muscles} />
+                <Tab key={ muscles } label={ muscles } />
             )}
         </Tabs>
     </Paper>
