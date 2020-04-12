@@ -13,7 +13,7 @@ const styles ={
 
 // look this up
 export default props => 
-    <Grid container sm={12} spacing={3}>
+    <Grid container>
         <Grid item sm>
             <LeftPane styles={styles} />
         </Grid>
